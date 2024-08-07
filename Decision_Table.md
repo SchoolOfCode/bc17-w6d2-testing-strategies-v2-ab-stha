@@ -30,12 +30,12 @@ Imagine a library has the following rules for borrowing books:
 
 Now, let's create a decision table to represent these rules:
 
-| Conditions | Test Case 1 | Test Case 2 | Test Case 3 | Test Case 4 | Test Case 5 | Test Case 6 |
-|------------|-------------|-------------|-------------|-------------|-------------|-------------|
-| Borrower Type | Student | Student | Teacher | Teacher | Other | Other |
-| Book Availability | Available | Not Available | Available | Not Available | Available | Not Available |
-| Allow Borrowing | ✓ | ✗ | ✓ | ✓ | ✓ | ✗ |
-| Charge Fee | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| Conditions        | Test Case 1 | Test Case 2 | Test Case 3 | Test Case 4 | Test Case 5 | Test Case 6 |
+|-------------------|-------------|-------------|-------------|-------------|-------------|-------------|
+| Borrower Type     | Student     | Student     | Teacher     | Teacher     | Other       | Other       |
+| Book Availability | Available   |Not Available| Available   |Not Available| Available   |Not Available|
+| Allow Borrowing   | ✓           | ✗          | ✓           | ✓          | ✓           | ✗           |
+| Charge Fee        | ✗           | ✗          | ✗           | ✗          | ✓          | ✗           |
 
 Let's break down the decision table:
 
@@ -102,18 +102,18 @@ The shopping cart system performs the following actions based on the combination
 2. Fill in the table with the appropriate values for each combination of conditions.
 3. Ensure that all possible combinations are covered.
 
-| Conditions | Test Case 1 |
-|------------|---------|
-| Product Type |       |
-| Quantity   |         |
-| Discount Code |      |
-| Calculate Subtotal |   |
-| Apply Discount |      |
-| Calculate Tax |       |
-| Calculate Shipping |  |
-| Calculate Total |     |
-| Update Inventory |    |
-| Generate Invoice |    |
+| Conditions         | Test Case 1 | Test Case 2 | Test Case 3 | Test Case 4 | Test Case 5 | Test Case 6 | Test Case 7 | Test Case 8 |
+|--------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
+| Product Type       |  physical   |  physical   |  physical   |  physical   |   digital   |   digital   |   digital   |   digital   |
+| Quantity           |      1      |      2      |      1      |      2      |      1      |      2      |      1      |      2      |
+| Discount Code      |    valid    |    valid    |   invalid   |   invalid   |    valid    |    valid    |   invalid   |   invalid   |
+| Calculate Subtotal |     ✓       |     ✓      |     ✓       |     ✓       |     ✓      |     ✓       |     ✓       |   ✓        |
+| Apply Discount     |     ✓       |     ✓      |     ✗       |     ✗       |     ✓      |     ✓       |     ✗       |   ✗        |
+| Calculate Tax      |     ✓       |     ✓      |     ✓       |     ✓       |     ✗      |     ✗       |     ✗       |   ✗        |
+| Calculate Shipping |     ✓       |     ✓      |     ✓       |     ✓       |     ✗      |     ✗       |     ✗       |   ✗        |
+| Calculate Total    |     ✓       |     ✓      |     ✓       |     ✓       |     ✓      |     ✓       |     ✓       |   ✓        |
+| Update Inventory   |     ✓       |     ✓      |     ✓       |     ✓       |     ✗      |     ✗       |     ✗       |   ✗        |
+| Generate Invoice   |     ✓       |     ✓      |     ✓       |     ✓       |     ✓      |     ✓       |     ✓       |   ✓        |
 
 ### Task 3: Identify Test Cases
 1. Based on the decision table, identify the test cases that need to be executed.
